@@ -9,10 +9,10 @@ import SectionEyebrow from '../components/SectionEyebrow'
 import { projects } from '../data/projects'
 
 const stats = [
-  { value: 7000, suffix: '+', label: 'Custom NLP training problems' },
-  { value: 4,    suffix: '',  label: 'Shipped projects'             },
-  { value: 1,    suffix: '',  label: 'National hackathon win'       },
-  { value: 2026, suffix: '',  label: 'Graduating'                   },
+  { value: 10000, suffix: '+', label: 'Custom NLP training problems' },
+  { value: 4, suffix: '', label: 'Shipped projects' },
+  { value: 1, suffix: '', label: 'National hackathon win' },
+  { value: 2026, suffix: '', label: 'Graduating' },
 ]
 
 const featuredProjects = projects.filter((p) => p.featured)
@@ -105,7 +105,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Graduating May 2026. Looking for internships and full-time opportunities in ML engineering and full-stack development.
+            Graduating July 2026. Looking for internships and full-time opportunities in ML engineering and full-stack development.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 8 }}

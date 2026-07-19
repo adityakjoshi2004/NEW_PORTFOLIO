@@ -20,19 +20,19 @@ const directLinks = [
   {
     label: 'LinkedIn',
     value: 'aditya-kumar-joshi',
-    href: 'https://linkedin.com/in/aditya-kumar-joshi',
+    href: 'https://www.linkedin.com/in/aditya-kumar-joshi-3919bb255/',
     icon: Link2,
   },
   {
     label: 'GitHub',
     value: 'AdityaKumarJoshi',
-    href: 'https://github.com/AdityaKumarJoshi',
+    href: 'https://github.com/adityakjoshi2004',
     icon: ExternalLink,
   },
   {
     label: 'LeetCode',
     value: 'AdityaKumarJoshi',
-    href: 'https://leetcode.com/AdityaKumarJoshi',
+    href: 'https://leetcode.com/u/adityajoshi04/',
     icon: Code2,
   },
 ]
