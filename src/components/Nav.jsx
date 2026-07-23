@@ -5,13 +5,13 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { to: '/',           label: 'Home'       },
-  { to: '/about',      label: 'About'      },
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
   { to: '/experience', label: 'Experience' },
-  { to: '/projects',   label: 'Projects'   },
-  { to: '/skills',     label: 'Skills'     },
-  { to: '/contact',    label: 'Contact'    },
-  { to: '/blogs',      label: 'Blog'       },
+  { to: '/projects', label: 'Projects' },
+  { to: '/skills', label: 'Skills' },
+  { to: '/contact', label: 'Contact' },
+  { to: '/blogs', label: 'Blog' },
 ]
 
 export default function Nav() {
@@ -65,7 +65,7 @@ export default function Nav() {
           to="/"
           className="font-mono text-sm tracking-wider"
           style={{ color: 'var(--accent-primary)' }}
-          aria-label="Aditya Kumar Joshi — home"
+          aria-label="Aditya Kumar Joshi - home"
         >
           AKJ<span style={{ color: 'var(--text-muted)' }}>_</span>
         </Link>
@@ -78,10 +78,9 @@ export default function Nav() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `font-sans text-sm transition-colors duration-200 ${
-                    isActive
-                      ? 'text-accent-primary font-semibold'
-                      : 'text-primary hover:text-accent-secondary'
+                  `font-sans text-sm transition-colors duration-200 ${isActive
+                    ? 'text-accent-primary font-semibold'
+                    : 'text-primary hover:text-accent-secondary'
                   }`
                 }
                 style={({ isActive }) => ({
@@ -94,7 +93,7 @@ export default function Nav() {
           ))}
         </ul>
 
-        {/* CTA — desktop */}
+        {/* CTA - desktop */}
         <a
           href="mailto:adityakjoshi01@gmail.com"
           className="hidden md:inline-flex btn-ghost py-2 px-4 text-xs"
@@ -131,8 +130,7 @@ export default function Nav() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `block py-3 px-2 font-sans text-sm border-b transition-colors duration-200 ${
-                    isActive ? 'font-semibold' : ''
+                  `block py-3 px-2 font-sans text-sm border-b transition-colors duration-200 ${isActive ? 'font-semibold' : ''
                   }`
                 }
                 style={({ isActive }) => ({

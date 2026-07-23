@@ -11,13 +11,13 @@ import { useReducedMotion } from '../hooks/useReducedMotion'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Blogs() {
-  const lineRef  = useRef(null)
+  const lineRef = useRef(null)
   const trackRef = useRef(null)
   const reducedMotion = useReducedMotion()
 
-  // GSAP scroll-scrubbed line — identical technique to Experience timeline
+  // GSAP scroll-scrubbed line - identical technique to Experience timeline
   useEffect(() => {
-    const line  = lineRef.current
+    const line = lineRef.current
     const track = trackRef.current
     if (!line || !track) return
 
@@ -73,7 +73,7 @@ export default function Blogs() {
           Technical writing on machine learning, computer vision, full-stack development, and the lessons learned shipping real products.
         </motion.p>
 
-        {/* Timeline track — same structure as Experience */}
+        {/* Timeline track - same structure as Experience */}
         <div ref={trackRef} className="relative max-w-2xl">
 
           {/* Animated vertical line */}
@@ -107,7 +107,7 @@ export default function Blogs() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          // more posts coming — follow on{' '}
+          // more posts coming - follow on{' '}
           <a
             href="https://github.com/AdityaKumarJoshi"
             target="_blank"

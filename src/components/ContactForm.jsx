@@ -158,7 +158,7 @@ export default function ContactForm() {
         )}
       </button>
 
-      {/* Status feedback — mono styled */}
+      {/* Status feedback - mono styled */}
       <AnimatePresence>
         {status === 'success' && (
           <motion.p
@@ -170,7 +170,7 @@ export default function ContactForm() {
             role="status"
           >
             <CheckCircle size={16} />
-            message // sent — I'll get back to you soon.
+            message // sent - I'll get back to you soon.
           </motion.p>
         )}
         {status === 'error' && (
@@ -183,7 +183,7 @@ export default function ContactForm() {
             role="alert"
           >
             <AlertCircle size={16} />
-            error // something went wrong — try emailing directly.
+            error // something went wrong - try emailing directly.
           </motion.p>
         )}
       </AnimatePresence>

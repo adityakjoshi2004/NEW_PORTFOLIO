@@ -26,7 +26,7 @@ export default function ProjectCard({ project, index = 0 }) {
           borderColor: 'rgba(167,151,138,0.1)',
         }}
       >
-        {/* Reticle on hover — wraps the whole card */}
+        {/* Reticle on hover - wraps the whole card */}
         <div className="absolute inset-0 pointer-events-none">
           <Reticle
             active={false}

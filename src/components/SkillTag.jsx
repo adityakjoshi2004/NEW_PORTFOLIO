@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 /**
- * Skill tag — shows name by default, shows mono confidence readout on hover.
+ * Skill tag - shows name by default, shows mono confidence readout on hover.
  */
 export default function SkillTag({ name, confidence = 0.85, index = 0 }) {
   const [hovered, setHovered] = useState(false)
@@ -20,7 +20,7 @@ export default function SkillTag({ name, confidence = 0.85, index = 0 }) {
       onBlur={() => setHovered(false)}
       tabIndex={0}
       role="listitem"
-      aria-label={`${name} — confidence ${Math.round(confidence * 100)}%`}
+      aria-label={`${name} - confidence ${Math.round(confidence * 100)}%`}
       className="relative inline-flex items-center px-3 py-1.5 rounded-sm border cursor-default select-none
                  transition-all duration-200 overflow-hidden"
       style={{
@@ -38,7 +38,7 @@ export default function SkillTag({ name, confidence = 0.85, index = 0 }) {
         {name}
       </motion.span>
 
-      {/* Hover — mono confidence readout */}
+      {/* Hover - mono confidence readout */}
       <motion.span
         animate={{ opacity: hovered ? 1 : 0, y: hovered ? 0 : 8 }}
         transition={{ duration: 0.15 }}

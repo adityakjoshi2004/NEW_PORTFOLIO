@@ -29,7 +29,7 @@ export default function Skills() {
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
         >
-          Hover any tag to see the detection confidence readout — a playful nod to model output, not a literal metric.
+          Hover any tag to see the detection confidence readout - a playful nod to model output, not a literal metric.
         </motion.p>
 
         <div className="flex flex-col gap-12 md:gap-16">

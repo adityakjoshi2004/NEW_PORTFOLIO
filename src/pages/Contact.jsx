@@ -12,12 +12,6 @@ const directLinks = [
     icon: Mail,
   },
   {
-    label: 'Phone',
-    value: '+91 7976158533',
-    href: 'tel:+917976158533',
-    icon: Phone,
-  },
-  {
     label: 'LinkedIn',
     value: 'aditya-kumar-joshi',
     href: 'https://www.linkedin.com/in/aditya-kumar-joshi-3919bb255/',
@@ -62,7 +56,7 @@ export default function Contact() {
           style={{ color: 'var(--text-muted)' }}
           {...fade(0.12)}
         >
-          Whether it's a job opportunity, a hackathon collab, or just a technical question — I'm reachable.
+          Whether it's a job opportunity, a hackathon collab, or just a technical question - I'm reachable.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20">

@@ -16,16 +16,16 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
 }
 
 const itemReduced = {
   hidden: { opacity: 0 },
-  show:   { opacity: 1, transition: { duration: 0.3 } },
+  show: { opacity: 1, transition: { duration: 0.3 } },
 }
 
 /**
- * Abstract CV-grid graphic — references Aditya's own object-detection work
+ * Abstract CV-grid graphic - references Aditya's own object-detection work
  * without needing a real photograph.
  */
 function CVGraphic() {
@@ -114,7 +114,7 @@ export default function Hero() {
       <div className="container-content w-full py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Left — text content */}
+          {/* Left - text content */}
           <motion.div
             variants={container}
             initial="hidden"
@@ -147,7 +147,7 @@ export default function Hero() {
               className="font-sans text-base md:text-lg leading-relaxed max-w-lg"
               style={{ color: 'var(--text-muted)' }}
             >
-              I build real-time computer vision systems and agentic AI tooling —
+              I build real-time computer vision systems and agentic AI tooling -
               end-to-end, from model to UI. Final-year CSE student at IES IPS
               Academy, shipping products that detect, understand, and respond.
             </motion.p>
@@ -201,7 +201,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right — CV graphic with reticle */}
+          {/* Right - CV graphic with reticle */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -210,7 +210,7 @@ export default function Hero() {
           >
             {/* Outer padding to give reticle space to sit outside the graphic */}
             <div className="relative p-6">
-              {/* Reticle — draws in on load, sits outside the graphic */}
+              {/* Reticle - draws in on load, sits outside the graphic */}
               <Reticle
                 active={true}
                 delay={0.9}
@@ -225,7 +225,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating mono label — "detection active" badge */}
+            {/* Floating mono label - "detection active" badge */}
             <motion.div
               initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}

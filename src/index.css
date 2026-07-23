@@ -8,18 +8,21 @@
 
 /* ─── CSS custom properties (design tokens) ────────────────────────────── */
 :root {
-  --bg-primary:       #171310;
-  --bg-secondary:     #241C16;
-  --text-primary:     #F3E9DA;
-  --text-muted:       #A7978A;
-  --accent-primary:   #C1603A;
+  --bg-primary: #171310;
+  --bg-secondary: #241C16;
+  --text-primary: #F3E9DA;
+  --text-muted: #A7978A;
+  --accent-primary: #C1603A;
   --accent-secondary: #E3A857;
-  --accent-tertiary:  #8B3A2B;
+  --accent-tertiary: #8B3A2B;
 }
 
 /* ─── Base reset & global styles ────────────────────────────────────────── */
 @layer base {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -57,13 +60,16 @@
   ::-webkit-scrollbar {
     width: 6px;
   }
+
   ::-webkit-scrollbar-track {
     background: var(--bg-primary);
   }
+
   ::-webkit-scrollbar-thumb {
     background: var(--bg-secondary);
     border-radius: 3px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-primary);
   }
@@ -94,7 +100,7 @@
     }
   }
 
-  /* Section eyebrow — mono kicker */
+  /* Section eyebrow - mono kicker */
   .eyebrow {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
@@ -106,7 +112,7 @@
   }
 
   .eyebrow::before {
-    content: '—';
+    content: '-';
     color: var(--accent-primary);
   }
 
@@ -178,7 +184,10 @@
 
 /* ─── Reduced-motion overrides ──────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

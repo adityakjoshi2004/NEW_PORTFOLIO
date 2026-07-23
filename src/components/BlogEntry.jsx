@@ -4,7 +4,7 @@ import { ArrowUpRight, Clock } from 'lucide-react'
 
 /**
  * A single blog entry on the timeline.
- * Mirrors TimelineEntry's layout — dot on the line, card body, date kicker.
+ * Mirrors TimelineEntry's layout - dot on the line, card body, date kicker.
  */
 export default function BlogEntry({ post, index = 0 }) {
   const { date, title, excerpt, readTime, tags, link } = post

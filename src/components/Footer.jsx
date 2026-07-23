@@ -23,11 +23,6 @@ const socials = [
     href: 'mailto:adityakjoshi01@gmail.com',
     icon: Mail,
   },
-  {
-    label: 'Phone',
-    href: 'tel:+917976158533',
-    icon: Phone,
-  },
 ]
 
 export default function Footer() {

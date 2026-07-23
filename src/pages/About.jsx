@@ -18,7 +18,7 @@ const certifications = [
 
 const recognition = [
   {
-    label: 'Smart India Hackathon 2025 — Winner',
+    label: 'Smart India Hackathon 2025 - Winner',
     icon: Award,
     highlight: true,
   },
@@ -52,9 +52,9 @@ export default function About() {
         {/* Bio */}
         <motion.div className="flex flex-col gap-4 mb-16" {...fade}>
           {[
-            `I'm a final-year Computer Science & Engineering student at IES IPS Academy, Indore, graduating May 2026. My focus sits at the intersection of machine learning and full-stack engineering — I build systems that don't just run inference, but ship as real products people can use.`,
+            `I'm a final-year Computer Science & Engineering student at IES IPS Academy, Indore, graduating May 2026. My focus sits at the intersection of machine learning and full-stack engineering - I build systems that don't just run inference, but ship as real products people can use.`,
             `My recent work spans real-time computer vision (YOLO-based fall and face-recognition systems), multilingual NLP (Hindi mathematical word-problem solving), and agentic AI tooling using LangChain, LangGraph, and the MCP protocol. I care about the full pipeline: data, model, API, and the user interface on top.`,
-            `Outside of shipping code, I help organise GDG on Campus at my college and curate events through Bad Talks — because good engineering culture matters as much as technical craft.`,
+            `Outside of shipping code, I help organise GDG on Campus at my college and curate events through Bad Talks - because good engineering culture matters as much as technical craft.`,
           ].map((para, i) => (
             <motion.p
               key={i}
@@ -153,7 +153,7 @@ export default function About() {
             {recognition.map(({ label, icon: Icon, highlight }) => (
               <li key={label} className="relative">
                 {highlight ? (
-                  /* Hackathon winner — gets the reticle treatment */
+                  /* Hackathon winner - gets the reticle treatment */
                   <div
                     className="relative inline-flex items-center gap-3 px-5 py-3 rounded-sm border"
                     style={{

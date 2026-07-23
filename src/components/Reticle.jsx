@@ -4,16 +4,16 @@ import { gsap } from 'gsap'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
 /**
- * SVG corner-bracket "detection reticle" — the site's signature motif.
+ * SVG corner-bracket "detection reticle" - the site's signature motif.
  *
  * Props:
- *   size     — pixel size of the square bracket frame (default 100%)
- *   label    — mono readout text beside the bracket (e.g. "role // ml engineer")
- *   active   — if true, animates immediately (hero mode)
+ *   size     - pixel size of the square bracket frame (default 100%)
+ *   label    - mono readout text beside the bracket (e.g. "role // ml engineer")
+ *   active   - if true, animates immediately (hero mode)
  *              if false, animates on hover/focus of parent
- *   className — extra classes for the wrapper
- *   strokeWidth — SVG stroke width (default 1.5)
- *   bracketLength — percentage of side the corner bracket covers (0-50, default 18)
+ *   className - extra classes for the wrapper
+ *   strokeWidth - SVG stroke width (default 1.5)
+ *   bracketLength - percentage of side the corner bracket covers (0-50, default 18)
  */
 export default function Reticle({
   size = '100%',
@@ -62,7 +62,7 @@ export default function Reticle({
     }
 
     return () => tl.kill()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active, delay, reducedMotion])
 
   // Expose play/reverse for hover

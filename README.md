@@ -1,4 +1,4 @@
-# Aditya Kumar Joshi — Portfolio
+# Aditya Kumar Joshi - Portfolio
 
 A multi-page personal portfolio for **Aditya Kumar Joshi**, a Machine Learning Engineer and Full-Stack Developer (final-year B.Tech CSE student at IES IPS Academy, Indore).
 
@@ -8,23 +8,23 @@ A multi-page personal portfolio for **Aditya Kumar Joshi**, a Machine Learning E
 |---|---|
 | Build | Vite 5 + React 18 |
 | Routing | React Router v6 |
-| Styling | Tailwind CSS v3 (custom palette — Espresso/Ember/Amber) |
+| Styling | Tailwind CSS v3 (custom palette - Espresso/Ember/Amber) |
 | Animation | Framer Motion + GSAP + ScrollTrigger |
 | Scroll | Lenis smooth scroll |
 | Icons | lucide-react |
 | Fonts | Fraunces · Manrope · JetBrains Mono (Google Fonts) |
-| Contact form | Formspree (swap in your endpoint — see below) |
+| Contact form | Formspree (swap in your endpoint - see below) |
 
 ## Pages
 
 | Route | Page |
 |---|---|
-| `/` | Home — Hero, stat counters, featured projects, CTA |
-| `/about` | About — bio, education, certifications, recognition |
-| `/experience` | Experience — GSAP scroll-drawn timeline |
-| `/projects` | Projects — 4 cards with hover reticle |
-| `/skills` | Skills — categorized tags with confidence readout |
-| `/contact` | Contact — form + direct links |
+| `/` | Home - Hero, stat counters, featured projects, CTA |
+| `/about` | About - bio, education, certifications, recognition |
+| `/experience` | Experience - GSAP scroll-drawn timeline |
+| `/projects` | Projects - 4 cards with hover reticle |
+| `/skills` | Skills - categorized tags with confidence readout |
+| `/contact` | Contact - form + direct links |
 
 
 
