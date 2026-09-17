@@ -1,20 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// The 3D world is lazy-loaded, so three.js arrives in its own chunk while
+// the entrance gate is already on screen.
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'vendor-react':  ['react', 'react-dom', 'react-router-dom'],
-          'vendor-motion': ['framer-motion'],
-          'vendor-gsap':   ['gsap'],
-          'vendor-lenis':  ['lenis'],
-        },
-      },
-    },
+    chunkSizeWarningLimit: 1100,
   },
 })
-

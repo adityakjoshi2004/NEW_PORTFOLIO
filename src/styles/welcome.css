@@ -1,0 +1,130 @@
+/* ---- landing screen: photo, name, designation, loader --------------------- */
+
+.landing {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  overflow-y: auto;
+  padding: calc(40px + env(safe-area-inset-top)) 20px calc(40px + env(safe-area-inset-bottom));
+  background: #000;
+  color: #fff;
+  transition: opacity 0.6s var(--ease);
+}
+
+.landing.is-leaving {
+  opacity: 0;
+}
+
+.landing__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 34rem;
+  margin: auto;
+  text-align: center;
+}
+
+.landing__inner > * {
+  animation: rise-in 0.9s var(--ease) both;
+}
+
+.landing__portrait {
+  width: 128px;
+  height: 128px;
+  background: #0d0d0d;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.28), 0 0 0 9px rgba(255, 255, 255, 0.05);
+}
+
+.landing__portrait .portrait__monogram {
+  color: #fff;
+}
+
+.landing__name {
+  margin: 2rem 0 0;
+  font-family: var(--display);
+  font-size: clamp(2.3rem, 7.5vw, 3.9rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: #fff;
+  animation-delay: 0.12s !important;
+}
+
+.landing__role {
+  margin: 0.9rem 0 0;
+  font-family: var(--sc);
+  font-size: clamp(0.82rem, 2.4vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.62);
+  animation-delay: 0.24s !important;
+}
+
+/* ---- the loader ---- */
+
+.landing__loader {
+  width: min(100%, 22rem);
+  margin-top: clamp(2.6rem, 8vw, 3.6rem);
+  animation-delay: 0.36s !important;
+}
+
+.landing__track {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.landing__fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  background: #fff;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.55);
+}
+
+/* a light travelling along the bar */
+.landing__track::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 38%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+  animation: landing-sweep 1.9s ease-in-out infinite;
+}
+
+@keyframes landing-sweep {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+
+.landing__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0.85rem;
+  font-family: var(--sc);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.landing__percent {
+  color: rgba(255, 255, 255, 0.92);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing__track::after {
+    display: none;
+  }
+}

@@ -1,0 +1,262 @@
+:root {
+  --green-950: #0c1712;
+  --green-900: #14261e;
+  --green-800: #1f3a2e;
+  --green-700: #2d4b3c;
+
+  --ivory: #f8f3e8;
+  --parchment: #efe5cf;
+  --paper-edge: #c9b48a;
+  --rule: rgba(138, 106, 59, 0.38);
+
+  --ink: #2a221b;
+  --ink-soft: #5a4d40;
+  --ink-faint: #806f5c;
+
+  --oxblood: #6b1e23;
+  --brass: #b08d57;
+  --brass-light: #d9bf87;
+  --brass-deep: #7f5f31;
+
+  --plate: rgba(12, 23, 18, 0.74);
+  --plate-line: rgba(217, 191, 135, 0.35);
+
+  --display: 'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --sc: 'Cormorant SC', 'Cormorant Garamond', 'Palatino Linotype', Georgia, serif;
+  --body: 'EB Garamond', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --paper: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .36 0 0 0 0 .26 0 0 0 0 .13 0 0 0 .075 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--green-950);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+body.is-plain {
+  overflow: auto;
+  background: #fff;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass-light);
+  outline-offset: 3px;
+}
+
+.stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--green-950);
+}
+
+.world {
+  position: absolute !important;
+  inset: 0;
+  touch-action: none;
+}
+
+.world--loading {
+  background: radial-gradient(ellipse at 50% 60%, #1c1812, var(--green-950));
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 58%, rgba(8, 14, 11, 0.42) 100%);
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--sc);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--brass-deep);
+}
+
+.eyebrow--light {
+  color: var(--brass-light);
+}
+
+/* ---- buttons ------------------------------------------------------------ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.7em 1.35em;
+  border: 1px solid var(--green-900);
+  border-radius: 2px;
+  background: var(--green-800);
+  color: var(--ivory);
+  font-family: var(--sc);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.25s var(--ease), box-shadow 0.25s;
+}
+
+.button:hover {
+  background: var(--green-700);
+  transform: translateY(-1px);
+}
+
+.button--brass {
+  border-color: var(--brass-deep);
+  background: linear-gradient(180deg, #e2c992, var(--brass));
+  color: var(--green-950);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 10px 30px -10px rgba(217, 191, 135, 0.45);
+}
+
+.button--brass:hover {
+  background: linear-gradient(180deg, #ecd6a4, #bf9c64);
+}
+
+.button--ghost {
+  border-color: var(--plate-line);
+  background: transparent;
+  color: var(--brass-light);
+}
+
+.button--ghost:hover {
+  background: rgba(217, 191, 135, 0.1);
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.3em 0;
+  border: 0;
+  background: none;
+  color: var(--ink-soft);
+  font-family: var(--sc);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+
+.link-button:hover {
+  color: var(--oxblood);
+}
+
+.link-button--light {
+  color: rgba(217, 191, 135, 0.85);
+}
+
+.link-button--light:hover {
+  color: var(--ivory);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.12s !important;
+  }
+}
+
+/* ---- portrait (public/photo.jpg, with a monogram fallback) ---------------- */
+
+.portrait {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle at 35% 30%, var(--green-700), var(--green-900));
+  container-type: size;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.portrait--round {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--brass), 0 0 0 5px rgba(217, 191, 135, 0.22);
+}
+
+/* The photo is a wide head-and-shoulders shot; small round frames zoom in on the face. */
+.portrait--round img {
+  transform: scale(1.6);
+  transform-origin: 46% 14%;
+}
+
+.portrait--arch {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 999px 999px 6px 6px;
+  box-shadow:
+    0 0 0 3px var(--brass),
+    0 0 0 10px var(--parchment),
+    0 0 0 11px var(--rule),
+    0 34px 60px -24px rgba(42, 34, 27, 0.5);
+}
+
+.portrait__monogram {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--brass-light);
+  font-family: var(--display);
+  font-size: 34cqmin;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
