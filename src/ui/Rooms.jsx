@@ -68,7 +68,7 @@ export function Library() {
   const book = projects.find((p) => p.id === open)
   return (
     <>
-      <p className="room-intro">Four bound volumes of work. Take one from the shelf.</p>
+      <p className="room-intro">Five bound volumes of work. Take one from the shelf.</p>
       <div className="shelf" role="tablist" aria-label="Projects">
         {projects.map((p) => (
           <button

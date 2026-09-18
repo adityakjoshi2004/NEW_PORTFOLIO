@@ -38,16 +38,34 @@ export const about = {
 
 export const projects = [
   {
+    id: 'securevision',
+    tagline: 'Agentic weapon detection that acts, not just alerts',
+    volume: 'I',
+    title: 'SecureVision X — Agentic AI-Based Weapon Detection System',
+    spine: 'SecureVision X',
+    stack: ['YOLOv8', 'LangGraph', 'Gemini', 'FastAPI', 'React'],
+    summary:
+      'A custom YOLOv8 weapon detector wired into a multi-agent security pipeline that assesses risk, retrieves the right emergency SOP and sends the notifications itself.',
+    detail:
+      'LangGraph orchestrates the agents over Gemini 2.5 Flash Vision and a Chroma RAG store; a FastAPI + React interface handles image and video detection and streams live workflow updates over SSE.',
+    figures: [
+      { value: '98.8%', label: 'mAP@0.5 · 90.4% mAP@0.5:0.95' },
+      { value: '98.8%', label: 'precision · 96.9% recall' },
+      { value: '275', label: 'test images' },
+    ],
+    cloth: '#3a2b4a',
+  },
+  {
     id: 'hindi-solver',
     tagline: 'Turns Hindi word problems into equations',
-    volume: 'I',
-    title: 'Hindi Mathematical Word Problem Solver',
-    spine: 'Hindi Solver',
+    volume: 'II',
+    title: 'Mathematical Equation Generator',
+    spine: 'Math Equations',
     stack: ['NLP', 'mT5', 'Transformers'],
     summary:
-      'Fine-tuned an mT5 model on 12,744 Hindi math word problems to translate natural-language questions into symbolic equations.',
+      'Fine-tuned an mT5 model on 12,744 Hindi math word problems to generate symbolic equations from natural-language questions.',
     detail:
-      'Trained for 15 epochs with validation-loss-based model selection, then evaluated on 1,412 held-out problems.',
+      'Trained for 15 epochs with validation-loss-based model selection, then evaluated on 1,412 validation samples.',
     figures: [
       { value: '97.73%', label: 'exact-match accuracy' },
       { value: '99.56%', label: 'BLEU-1' },
@@ -58,7 +76,7 @@ export const projects = [
   {
     id: 'hazardhawk',
     tagline: 'Real-time fall detection from live cameras',
-    volume: 'II',
+    volume: 'III',
     title: 'HazardHawk AI',
     spine: 'HazardHawk AI',
     stack: ['YOLOv11', 'XGBoost', 'FastAPI', 'React'],
@@ -67,7 +85,7 @@ export const projects = [
     detail:
       'A YOLOv11 detector is double-checked by an XGBoost verification model built on bounding-box spatial features, with a FastAPI + React dashboard for real-time visualisation and analytics.',
     figures: [
-      { value: '88.3%', label: 'mAP@50' },
+      { value: '88.3%', label: 'mAP@50 · 66.7% mAP@50-95' },
       { value: '85.1%', label: 'precision · 80.5% recall' },
       { value: '98.2%', label: 'fall verification accuracy (F1 0.98)' },
     ],
@@ -76,7 +94,7 @@ export const projects = [
   {
     id: 'attendance',
     tagline: 'Face-recognition attendance, live',
-    volume: 'III',
+    volume: 'IV',
     title: 'Smart Attendance Marking System',
     spine: 'Attendance',
     stack: ['FaceNet', 'DeepFace', 'FastAPI', 'React'],
@@ -93,7 +111,7 @@ export const projects = [
   {
     id: 'stock-assistant',
     tagline: 'Personal finance and stock insights',
-    volume: 'IV',
+    volume: 'V',
     title: 'Personal Stock Assistant',
     spine: 'Stock Assistant',
     stack: ['MongoDB', 'Express', 'React', 'Node', 'Google Sheets API'],
