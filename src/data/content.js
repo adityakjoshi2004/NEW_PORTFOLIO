@@ -41,7 +41,7 @@ export const projects = [
     id: 'securevision',
     tagline: 'Agentic weapon detection that acts, not just alerts',
     volume: 'I',
-    title: 'SecureVision X — Agentic AI-Based Weapon Detection System',
+    title: 'SecureVision X - Agentic AI-Based Weapon Detection System',
     spine: 'SecureVision X',
     stack: ['YOLOv8', 'LangGraph', 'Gemini', 'FastAPI', 'React'],
     summary:
